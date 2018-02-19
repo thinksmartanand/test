@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hint</title>
+
+	<script type="text/javascript">
+
+//********************************************************************************************
+	var pi = 3.14;
+	function drawCircle(r){console.log("Drawing circle of radius " + r);}
+	function Ball(r) {
+    	this.radius = r; //the radius variable is local to the ball object
+    	this.area = pi*r**2;
+    	this.show = function(){ //objects can contain functions
+        drawCircle(r); //references a circle drawing function
+    	}
+	}
+	myBall = new Ball(5); //creates a new instance of the ball object with radius 5
+	myBall.show(); //this instance of the ball object has the show function performed on it
+
+//********************************************************************************************		
+	function sum() {
+    	var x = 0;
+    	for (var i = 0; i < arguments.length; ++i) {
+        	x += arguments[i];
+    	}
+    	return x;
+	}
+	console.log(sum(1, 2)); // returns 3
+	console.log(sum(1, 2, 3)); // returns 6
+
+//********************************************************************************************
+	var counter = (function () {
+    var i = 0; // private property
+
+    return {   // public methods
+        get: function () {
+            alert(i);
+        },
+        set: function (value) {
+            i = value;
+        },
+        increment: function () {
+            alert(++i);
+        }
+    };
+})(); // module
+
+counter.get();       // shows 0
+counter.set(6);
+counter.increment(); // shows 7
+counter.increment(); // shows 8
+
+//********************************************************************************************
+
+	</script>
+
+</head>
+<body>
+	<p>How to improve the maturity score ?</p>
+<ul>
+	
+<li>Complete the context setting (Vertical / Process and Objective)</li>
+<li>Complete diagnostics: preliminary hypothesis – Metrics / Causes and Solutions</li>
+<li>Build the diagnostic map in Process Model section
+          Process and Steps
+          Connect Metrics / Causes and Solutions to steps or process and add comments / priority flags</li>
+<li>Add data (baseline and target) for Metrics</li>
+<li>Build the Solution Checklist</li>
+</ul>
+</body>
+</html>
+
+
+===============
+
+
+<h1>Congratulations on taking the First Step to Sign Up!</h1>
+             <h1>You are just 2 steps away.</h1>
+<img src="[@app:INSOL][@authfield:AppInstances_InstanceFolder]content/img/Register1.png" alt="sign up" title="Open Orbit - Clever meets simple." style="padding-left: 20px;"/>
+<!--<h2>Your submission was successful</h2>-->
+<p>You will shortly receive an email from [@app:adminemail]&nbsp;with a link to the subscriptions page (You may need to check the spam folder).</p>
+<p>Thank you.</p>
